@@ -53,15 +53,46 @@ public class Main {
             이상의 경우 new 클래스2명(), new클래스3명()를 통해 객체 생성은 이미 완료가 되었습니다.
             다만, 여태까지와의 차이점은 new 클래스2명(), new 클래스3명()에 해당하는 객체명이 없을 뿐입니다.
          */
-        RemoteController remoteController = new RemoteController(new PowerButton(), new ChannelDownButton(), new ChannelUpButton());
+//        RemoteController remoteController = new RemoteController(new PowerButton(), new ChannelDownButton(), new ChannelUpButton());
+//
+//        remoteController.onPressedPowerButton();
+//        remoteController.onPressedPowerButton();
+//
+//        remoteController.onDownChannelDownButton();
+//        remoteController.onPressedChannelDownButton();
+//        remoteController.onUpChannelUpButton();
+//        remoteController.onPressedChannelUpButton();
+
+        RemoteController remoteController = new RemoteController(new PowerButton(), new ChannelDownButton(), new ChannelUpButton(), new VolumeDownButton(), new VolumeUpButton());
 
         remoteController.onPressedPowerButton();
         remoteController.onPressedPowerButton();
 
         remoteController.onDownChannelDownButton();
+
         remoteController.onPressedChannelDownButton();
         remoteController.onUpChannelUpButton();
         remoteController.onPressedChannelUpButton();
+
+        remoteController.onPressedVolumeDownButton();
+        remoteController.onDownVolumeDownButton();
+        System.out.println();
+        remoteController.onPressedVolumeUpButton();
+        remoteController.onUpVolumeUpButton();
+
+        // AirConditionerController 객체 생성
+        AirconditionerController airconditionerController = new AirconditionerController(new PowerButton(), new TemperatureDownButton(), new TemperatureUpButton());
+
+        airconditionerController.onPressedPowerButton();
+        airconditionerController.onPressedPowerButton();
+        System.out.println();
+        airconditionerController.onPressedTemperatureDownButton();
+        airconditionerController.onDownTemperatureDownButton();
+        System.out.println();
+        airconditionerController.onPressedTemperatureUpButton();
+        airconditionerController.onUpTemperatureUpButton();
+
+
 
 
     }
