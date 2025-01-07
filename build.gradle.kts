@@ -1,6 +1,5 @@
 plugins {
-    id("java")
-    kotlin("jvm")
+    id("java");
 }
 
 group = "org.example"
@@ -13,13 +12,10 @@ repositories {
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
-    implementation(kotlin("stdlib-jdk8"))
+    compileOnly("org.projectlombok:lombok:1.18.36")
+    annotationProcessor("org.projectlombok:lombok:1.18.36")
 }
-
 
 tasks.test {
     useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(17)
 }
