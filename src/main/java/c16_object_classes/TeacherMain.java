@@ -70,6 +70,6 @@ public class TeacherMain {
         System.out.println(teacher1.getClass() == Teacher.class);   // true
         System.out.println(teacher2.getClass() == Teacher.class);   // true
         System.out.println("teacher3에 대한 정보입니다");
-//        System.out.println(teacher3.getClass() == Teacher.class);   //위와 동일한 이유로 오류 발생
+//        System.out.println(teacher3.getClass() == Teacher.class);   // 위와 동일한 이유로 오류 발생
     }
 }
